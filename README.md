@@ -1,2 +1,2 @@
 # SwiftTableViewPagination
-Swift TableView pagination.
+Swift TableView pagination with async API request.
