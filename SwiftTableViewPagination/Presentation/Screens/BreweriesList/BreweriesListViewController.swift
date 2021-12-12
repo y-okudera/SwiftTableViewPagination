@@ -11,19 +11,19 @@ class BreweriesListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        requestBreweries()
     }
-    
 
-    /*
-    // MARK: - Navigation
+    private func requestBreweries() {
+        Task {
+            do {
+                let request = ListBreweriesRequest(state: "new_york", page: 1)
+                let response = try await WebApiRemoteDataSourceProvider.provide().httpGet(for: request)
+                print("response:", response)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+            } catch let e as WebApiError {
+                print(e)
+            }
+        }
     }
-    */
-
 }
