@@ -16,11 +16,15 @@
 		B65DE9B8275FB8E600ECC3C6 /* SwiftTableViewPaginationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DE9B7275FB8E600ECC3C6 /* SwiftTableViewPaginationUITestsLaunchTests.swift */; };
 		B65F435E27664D8700A63F56 /* BreweriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F435D27664D8700A63F56 /* BreweriesListViewController.swift */; };
 		B65F436027664D9200A63F56 /* BreweriesListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65F435F27664D9200A63F56 /* BreweriesListViewController.storyboard */; };
-		B65F4363276655EA00A63F56 /* WebApiRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F4362276655EA00A63F56 /* WebApiRemoteDataSource.swift */; };
+		B65F4363276655EA00A63F56 /* ApiRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F4362276655EA00A63F56 /* ApiRemoteDataSource.swift */; };
 		B65F4368276660D600A63F56 /* GetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F4367276660D600A63F56 /* GetRequest.swift */; };
-		B65F436C27666EE600A63F56 /* ListBreweriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F436B27666EE600A63F56 /* ListBreweriesRequest.swift */; };
+		B65F436C27666EE600A63F56 /* BreweriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F436B27666EE600A63F56 /* BreweriesRequest.swift */; };
 		B65F436E27666F1F00A63F56 /* Brewery.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F436D27666F1F00A63F56 /* Brewery.swift */; };
-		B65F43712766793200A63F56 /* WebApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F43702766793200A63F56 /* WebApiError.swift */; };
+		B65F43712766793200A63F56 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F43702766793200A63F56 /* ApiError.swift */; };
+		B67D4E47276796AA009604E8 /* BreweriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D4E46276796AA009604E8 /* BreweriesRepository.swift */; };
+		B67D4E4B27679E2B009604E8 /* BreweriesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D4E4A27679E2B009604E8 /* BreweriesListPresenter.swift */; };
+		B67D4E4F276EED6F009604E8 /* ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D4E4E276EED6F009604E8 /* ErrorAlert.swift */; };
+		B67D4E52276EFC0A009604E8 /* BreweriesListViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D4E51276EFC0A009604E8 /* BreweriesListViewBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,11 +58,15 @@
 		B65DE9B7275FB8E600ECC3C6 /* SwiftTableViewPaginationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTableViewPaginationUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B65F435D27664D8700A63F56 /* BreweriesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesListViewController.swift; sourceTree = "<group>"; };
 		B65F435F27664D9200A63F56 /* BreweriesListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BreweriesListViewController.storyboard; sourceTree = "<group>"; };
-		B65F4362276655EA00A63F56 /* WebApiRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApiRemoteDataSource.swift; sourceTree = "<group>"; };
+		B65F4362276655EA00A63F56 /* ApiRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRemoteDataSource.swift; sourceTree = "<group>"; };
 		B65F4367276660D600A63F56 /* GetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRequest.swift; sourceTree = "<group>"; };
-		B65F436B27666EE600A63F56 /* ListBreweriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBreweriesRequest.swift; sourceTree = "<group>"; };
+		B65F436B27666EE600A63F56 /* BreweriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesRequest.swift; sourceTree = "<group>"; };
 		B65F436D27666F1F00A63F56 /* Brewery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brewery.swift; sourceTree = "<group>"; };
-		B65F43702766793200A63F56 /* WebApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApiError.swift; sourceTree = "<group>"; };
+		B65F43702766793200A63F56 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		B67D4E46276796AA009604E8 /* BreweriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesRepository.swift; sourceTree = "<group>"; };
+		B67D4E4A27679E2B009604E8 /* BreweriesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesListPresenter.swift; sourceTree = "<group>"; };
+		B67D4E4E276EED6F009604E8 /* ErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlert.swift; sourceTree = "<group>"; };
+		B67D4E51276EFC0A009604E8 /* BreweriesListViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesListViewBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,8 +163,9 @@
 		B65F4357276646FF00A63F56 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				B65F43642766576E00A63F56 /* Entity */,
 				B65F4361276655D900A63F56 /* DataSource */,
+				B65F43642766576E00A63F56 /* Entity */,
+				B67D4E4527678160009604E8 /* Repository */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -164,6 +173,7 @@
 		B65F435A276647D800A63F56 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				B67D4E4C276EED56009604E8 /* Components */,
 				B65F435B27664A9100A63F56 /* Screens */,
 				B65F43552765F23500A63F56 /* Resources */,
 			);
@@ -181,8 +191,9 @@
 		B65F435C27664AD100A63F56 /* BreweriesList */ = {
 			isa = PBXGroup;
 			children = (
-				B65F435D27664D8700A63F56 /* BreweriesListViewController.swift */,
-				B65F435F27664D9200A63F56 /* BreweriesListViewController.storyboard */,
+				B67D4E50276EFBFF009604E8 /* Builder */,
+				B67D4E4927679E17009604E8 /* Presenter */,
+				B67D4E4827679E10009604E8 /* View */,
 			);
 			path = BreweriesList;
 			sourceTree = "<group>";
@@ -190,7 +201,7 @@
 		B65F4361276655D900A63F56 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				B65F4362276655EA00A63F56 /* WebApiRemoteDataSource.swift */,
+				B65F4362276655EA00A63F56 /* ApiRemoteDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -209,7 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				B65F43722766795E00A63F56 /* Interface */,
-				B65F436B27666EE600A63F56 /* ListBreweriesRequest.swift */,
+				B65F436B27666EE600A63F56 /* BreweriesRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -225,7 +236,7 @@
 		B65F436F2766792800A63F56 /* Error */ = {
 			isa = PBXGroup;
 			children = (
-				B65F43702766793200A63F56 /* WebApiError.swift */,
+				B65F43702766793200A63F56 /* ApiError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -236,6 +247,55 @@
 				B65F4367276660D600A63F56 /* GetRequest.swift */,
 			);
 			path = Interface;
+			sourceTree = "<group>";
+		};
+		B67D4E4527678160009604E8 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B67D4E46276796AA009604E8 /* BreweriesRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		B67D4E4827679E10009604E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B65F435D27664D8700A63F56 /* BreweriesListViewController.swift */,
+				B65F435F27664D9200A63F56 /* BreweriesListViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B67D4E4927679E17009604E8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B67D4E4A27679E2B009604E8 /* BreweriesListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B67D4E4C276EED56009604E8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B67D4E4D276EED5C009604E8 /* ErrorAlert */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B67D4E4D276EED5C009604E8 /* ErrorAlert */ = {
+			isa = PBXGroup;
+			children = (
+				B67D4E4E276EED6F009604E8 /* ErrorAlert.swift */,
+			);
+			path = ErrorAlert;
+			sourceTree = "<group>";
+		};
+		B67D4E50276EFBFF009604E8 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				B67D4E51276EFC0A009604E8 /* BreweriesListViewBuilder.swift */,
+			);
+			path = Builder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,13 +429,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B65F436C27666EE600A63F56 /* ListBreweriesRequest.swift in Sources */,
+				B65F436C27666EE600A63F56 /* BreweriesRequest.swift in Sources */,
 				B65DE995275FB8E300ECC3C6 /* AppDelegate.swift in Sources */,
 				B65F4368276660D600A63F56 /* GetRequest.swift in Sources */,
+				B67D4E47276796AA009604E8 /* BreweriesRepository.swift in Sources */,
+				B67D4E4F276EED6F009604E8 /* ErrorAlert.swift in Sources */,
 				B65F436E27666F1F00A63F56 /* Brewery.swift in Sources */,
-				B65F4363276655EA00A63F56 /* WebApiRemoteDataSource.swift in Sources */,
+				B65F4363276655EA00A63F56 /* ApiRemoteDataSource.swift in Sources */,
 				B65DE997275FB8E300ECC3C6 /* SceneDelegate.swift in Sources */,
-				B65F43712766793200A63F56 /* WebApiError.swift in Sources */,
+				B67D4E52276EFC0A009604E8 /* BreweriesListViewBuilder.swift in Sources */,
+				B67D4E4B27679E2B009604E8 /* BreweriesListPresenter.swift in Sources */,
+				B65F43712766793200A63F56 /* ApiError.swift in Sources */,
 				B65F435E27664D8700A63F56 /* BreweriesListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

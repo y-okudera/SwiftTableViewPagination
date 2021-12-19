@@ -20,7 +20,7 @@ protocol GetRequest {
     var cachePolicy: URLRequest.CachePolicy { get }
 
     func buildURLRequest() -> URLRequest?
-    func decode(from data: Data) throws -> Response
+    func decodeFrom(data: Data) throws -> Response
 }
 
 extension GetRequest {
@@ -30,7 +30,7 @@ extension GetRequest {
     }
 
     var baseURL: URL {
-        return URL(string: "https://api.openbrewerydb.org")! // Endpoint
+        return URL(string: "https://api.openbrewerydb.org")!
     }
 
     var headers: [String: String]? {
@@ -44,7 +44,7 @@ extension GetRequest {
     }
 
     var timeoutInterval: TimeInterval {
-        return 30
+        return 15
     }
 
     var allowsCellularAccess: Bool {
@@ -68,10 +68,9 @@ extension GetRequest {
         return urlRequest
     }
 
-    func decode(from data: Data) throws -> Response {
+    func decodeFrom(data: Data) throws -> Response {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         return try decoder.decode(Response.self, from: data)
     }
 }
-

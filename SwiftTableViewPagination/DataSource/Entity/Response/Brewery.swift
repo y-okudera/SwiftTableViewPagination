@@ -13,7 +13,7 @@ struct Brewery: Decodable {
     let breweryType: String
     let street: String?
     let city: String
-    let state: String
+    let state: String?
     let country: String
     let postalCode: String
     let latitude: String?

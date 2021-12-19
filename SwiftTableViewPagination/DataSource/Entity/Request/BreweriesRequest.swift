@@ -1,5 +1,5 @@
 //
-//  ListBreweriesRequest.swift
+//  BreweriesRequest.swift
 //  SwiftTableViewPagination
 //
 //  Created by Yuki Okudera on 2021/12/13.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ListBreweriesRequest: GetRequest {
+struct BreweriesRequest: GetRequest {
     typealias Response = [Brewery]
 
     let path: String = "/breweries"
