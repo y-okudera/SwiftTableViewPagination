@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol BreweriesListPresenterProviding: AnyObject {
+protocol BreweriesListPresenterProviding {
     var view: BreweriesListViewProviding? { get set }
     var page: Int { get }
     var breweries: [Brewery] { get }

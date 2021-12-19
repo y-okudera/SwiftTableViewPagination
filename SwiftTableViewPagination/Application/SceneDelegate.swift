@@ -21,6 +21,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         window.makeKeyAndVisible()
 
+        // If testing, set empty UIViewController.
+        guard ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] == nil else {
+            window.rootViewController = UIViewController()
+            return
+        }
+
         let breweriesListVC = UIStoryboard(name: "BreweriesListViewController", bundle: nil)
             .instantiateViewController(withIdentifier: "BreweriesListViewController") as! BreweriesListViewController
         window.rootViewController = UINavigationController(rootViewController: breweriesListVC)
