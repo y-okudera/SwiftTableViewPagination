@@ -23,8 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let breweriesListVC = UIStoryboard(name: "BreweriesListViewController", bundle: nil)
             .instantiateViewController(withIdentifier: "BreweriesListViewController") as! BreweriesListViewController
-        let vc = BreweriesListViewBuilder.build(view: breweriesListVC, breweriesRepository: BreweriesRepositoryProvider.provide())
-        window.rootViewController = UINavigationController(rootViewController: vc)
+        window.rootViewController = UINavigationController(rootViewController: breweriesListVC)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

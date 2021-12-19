@@ -24,7 +24,13 @@
 		B67D4E47276796AA009604E8 /* BreweriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D4E46276796AA009604E8 /* BreweriesRepository.swift */; };
 		B67D4E4B27679E2B009604E8 /* BreweriesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D4E4A27679E2B009604E8 /* BreweriesListPresenter.swift */; };
 		B67D4E4F276EED6F009604E8 /* ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D4E4E276EED6F009604E8 /* ErrorAlert.swift */; };
-		B67D4E52276EFC0A009604E8 /* BreweriesListViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D4E51276EFC0A009604E8 /* BreweriesListViewBuilder.swift */; };
+		B67D4E5B276F6C8A009604E8 /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D4E5A276F6C8A009604E8 /* Injected.swift */; };
+		B67D4E5D276F6C9C009604E8 /* InjectedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D4E5C276F6C9C009604E8 /* InjectedValues.swift */; };
+		B67D4E5F276F6CBE009604E8 /* InjectionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D4E5E276F6CBE009604E8 /* InjectionKey.swift */; };
+		B67D4E63276F706F009604E8 /* ApiRemoteDataSourceProviderKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D4E62276F706F009604E8 /* ApiRemoteDataSourceProviderKey.swift */; };
+		B67D4E66276F728A009604E8 /* BreweriesRepositoryProviderKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D4E65276F728A009604E8 /* BreweriesRepositoryProviderKey.swift */; };
+		B67D4E6C276F7625009604E8 /* BreweriesListPresenterProviderKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D4E6B276F7625009604E8 /* BreweriesListPresenterProviderKey.swift */; };
+		B67D4E6F276F77F6009604E8 /* BreweriesListViewProviderKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D4E6E276F77F6009604E8 /* BreweriesListViewProviderKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +72,13 @@
 		B67D4E46276796AA009604E8 /* BreweriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesRepository.swift; sourceTree = "<group>"; };
 		B67D4E4A27679E2B009604E8 /* BreweriesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesListPresenter.swift; sourceTree = "<group>"; };
 		B67D4E4E276EED6F009604E8 /* ErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlert.swift; sourceTree = "<group>"; };
-		B67D4E51276EFC0A009604E8 /* BreweriesListViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesListViewBuilder.swift; sourceTree = "<group>"; };
+		B67D4E5A276F6C8A009604E8 /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
+		B67D4E5C276F6C9C009604E8 /* InjectedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedValues.swift; sourceTree = "<group>"; };
+		B67D4E5E276F6CBE009604E8 /* InjectionKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionKey.swift; sourceTree = "<group>"; };
+		B67D4E62276F706F009604E8 /* ApiRemoteDataSourceProviderKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRemoteDataSourceProviderKey.swift; sourceTree = "<group>"; };
+		B67D4E65276F728A009604E8 /* BreweriesRepositoryProviderKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesRepositoryProviderKey.swift; sourceTree = "<group>"; };
+		B67D4E6B276F7625009604E8 /* BreweriesListPresenterProviderKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesListPresenterProviderKey.swift; sourceTree = "<group>"; };
+		B67D4E6E276F77F6009604E8 /* BreweriesListViewProviderKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesListViewProviderKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +132,7 @@
 				B65F43542765F1DE00A63F56 /* Application */,
 				B65F4357276646FF00A63F56 /* DataSource */,
 				B65F435A276647D800A63F56 /* Presentation */,
+				B67D4E58276F6C71009604E8 /* PropertyWrapper */,
 			);
 			path = SwiftTableViewPagination;
 			sourceTree = "<group>";
@@ -164,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				B65F4361276655D900A63F56 /* DataSource */,
+				B67D4E60276F6F73009604E8 /* DependencyInjection */,
 				B65F43642766576E00A63F56 /* Entity */,
 				B67D4E4527678160009604E8 /* Repository */,
 			);
@@ -174,8 +188,9 @@
 			isa = PBXGroup;
 			children = (
 				B67D4E4C276EED56009604E8 /* Components */,
-				B65F435B27664A9100A63F56 /* Screens */,
+				B67D4E67276F7577009604E8 /* DependencyInjection */,
 				B65F43552765F23500A63F56 /* Resources */,
+				B65F435B27664A9100A63F56 /* Screens */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -191,7 +206,6 @@
 		B65F435C27664AD100A63F56 /* BreweriesList */ = {
 			isa = PBXGroup;
 			children = (
-				B67D4E50276EFBFF009604E8 /* Builder */,
 				B67D4E4927679E17009604E8 /* Presenter */,
 				B67D4E4827679E10009604E8 /* View */,
 			);
@@ -260,8 +274,8 @@
 		B67D4E4827679E10009604E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B65F435D27664D8700A63F56 /* BreweriesListViewController.swift */,
 				B65F435F27664D9200A63F56 /* BreweriesListViewController.storyboard */,
+				B65F435D27664D8700A63F56 /* BreweriesListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -290,12 +304,88 @@
 			path = ErrorAlert;
 			sourceTree = "<group>";
 		};
-		B67D4E50276EFBFF009604E8 /* Builder */ = {
+		B67D4E58276F6C71009604E8 /* PropertyWrapper */ = {
 			isa = PBXGroup;
 			children = (
-				B67D4E51276EFC0A009604E8 /* BreweriesListViewBuilder.swift */,
+				B67D4E59276F6C7B009604E8 /* Injected */,
 			);
-			path = Builder;
+			path = PropertyWrapper;
+			sourceTree = "<group>";
+		};
+		B67D4E59276F6C7B009604E8 /* Injected */ = {
+			isa = PBXGroup;
+			children = (
+				B67D4E5A276F6C8A009604E8 /* Injected.swift */,
+				B67D4E5C276F6C9C009604E8 /* InjectedValues.swift */,
+				B67D4E5E276F6CBE009604E8 /* InjectionKey.swift */,
+			);
+			path = Injected;
+			sourceTree = "<group>";
+		};
+		B67D4E60276F6F73009604E8 /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				B67D4E61276F6F95009604E8 /* DataSource */,
+				B67D4E64276F726A009604E8 /* Repository */,
+			);
+			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
+		B67D4E61276F6F95009604E8 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				B67D4E62276F706F009604E8 /* ApiRemoteDataSourceProviderKey.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		B67D4E64276F726A009604E8 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B67D4E65276F728A009604E8 /* BreweriesRepositoryProviderKey.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		B67D4E67276F7577009604E8 /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				B67D4E68276F75DE009604E8 /* Screens */,
+			);
+			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
+		B67D4E68276F75DE009604E8 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B67D4E69276F75EC009604E8 /* BreweriesList */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B67D4E69276F75EC009604E8 /* BreweriesList */ = {
+			isa = PBXGroup;
+			children = (
+				B67D4E6A276F75F2009604E8 /* Presenter */,
+				B67D4E6D276F77DF009604E8 /* View */,
+			);
+			path = BreweriesList;
+			sourceTree = "<group>";
+		};
+		B67D4E6A276F75F2009604E8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B67D4E6B276F7625009604E8 /* BreweriesListPresenterProviderKey.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B67D4E6D276F77DF009604E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B67D4E6E276F77F6009604E8 /* BreweriesListViewProviderKey.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,14 +520,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				B65F436C27666EE600A63F56 /* BreweriesRequest.swift in Sources */,
+				B67D4E5F276F6CBE009604E8 /* InjectionKey.swift in Sources */,
 				B65DE995275FB8E300ECC3C6 /* AppDelegate.swift in Sources */,
 				B65F4368276660D600A63F56 /* GetRequest.swift in Sources */,
+				B67D4E63276F706F009604E8 /* ApiRemoteDataSourceProviderKey.swift in Sources */,
+				B67D4E5D276F6C9C009604E8 /* InjectedValues.swift in Sources */,
 				B67D4E47276796AA009604E8 /* BreweriesRepository.swift in Sources */,
+				B67D4E5B276F6C8A009604E8 /* Injected.swift in Sources */,
+				B67D4E6F276F77F6009604E8 /* BreweriesListViewProviderKey.swift in Sources */,
+				B67D4E6C276F7625009604E8 /* BreweriesListPresenterProviderKey.swift in Sources */,
 				B67D4E4F276EED6F009604E8 /* ErrorAlert.swift in Sources */,
+				B67D4E66276F728A009604E8 /* BreweriesRepositoryProviderKey.swift in Sources */,
 				B65F436E27666F1F00A63F56 /* Brewery.swift in Sources */,
 				B65F4363276655EA00A63F56 /* ApiRemoteDataSource.swift in Sources */,
 				B65DE997275FB8E300ECC3C6 /* SceneDelegate.swift in Sources */,
-				B67D4E52276EFC0A009604E8 /* BreweriesListViewBuilder.swift in Sources */,
 				B67D4E4B27679E2B009604E8 /* BreweriesListPresenter.swift in Sources */,
 				B65F43712766793200A63F56 /* ApiError.swift in Sources */,
 				B65F435E27664D8700A63F56 /* BreweriesListViewController.swift in Sources */,

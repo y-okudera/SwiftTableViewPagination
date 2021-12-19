@@ -7,23 +7,14 @@
 
 import Foundation
 
-enum BreweriesRepositoryProvider {
-    static func provide() -> BreweriesRepository {
-        return BreweriesRepositoryImpl(apiRemoteDataSource: ApiRemoteDataSourceProvider.provide())
-    }
-}
-
-protocol BreweriesRepository {
+protocol BreweriesRepositoryProviding {
     func fetch(state: String, page: Int) async throws -> [Brewery]
 }
 
-private struct BreweriesRepositoryImpl: BreweriesRepository {
+struct BreweriesRepository: BreweriesRepositoryProviding {
 
-    private let apiRemoteDataSource: ApiRemoteDataSource
-
-    init(apiRemoteDataSource: ApiRemoteDataSource) {
-        self.apiRemoteDataSource = apiRemoteDataSource
-    }
+    @Injected(\.apiRemoteDataSourceProvider)
+    private var apiRemoteDataSource: ApiRemoteDataSourceProviding
 
     func fetch(state: String, page: Int) async throws -> [Brewery] {
         let breweriesRequest = BreweriesRequest(state: state, page: page)
