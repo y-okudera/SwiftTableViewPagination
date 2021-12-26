@@ -7,8 +7,8 @@
 
 import Foundation
 
-protocol BreweriesListPresenter: AnyObject {
-    var view: BreweriesListView? { get set }
+protocol BreweriesListPresenterProviding {
+    var view: BreweriesListViewProviding? { get set }
     var page: Int { get }
     var breweries: [Brewery] { get }
     var isLoading: Bool { get }
@@ -17,19 +17,17 @@ protocol BreweriesListPresenter: AnyObject {
     func scrollViewReachedBottom()
 }
 
-final class BreweriesListPresenterImpl: BreweriesListPresenter {
+final class BreweriesListPresenter: BreweriesListPresenterProviding {
 
-    private let breweriesRepository: BreweriesRepository
-    weak var view: BreweriesListView?
+    @Injected(\.breweriesRepositoryProvider)
+    private var breweriesRepository: BreweriesRepositoryProviding
+
+    weak var view: BreweriesListViewProviding?
 
     private(set) var page: Int = 0
     private(set) var breweries: [Brewery] = []
     private(set) var isLoading: Bool = false
     private var hasNext = true
-
-    init(breweriesRepository: BreweriesRepository) {
-        self.breweriesRepository = breweriesRepository
-    }
 
     func viewDidLoad() {
         fetchBreweries()

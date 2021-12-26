@@ -7,8 +7,7 @@
 
 import UIKit
 
-protocol BreweriesListView where Self: UIViewController {
-    var presenter: BreweriesListPresenter! { get set }
+protocol BreweriesListViewProviding where Self: UIViewController {
     func reload()
     func showErrorAlert(error: Error, retryHandler: @escaping () -> Void)
 }
@@ -22,19 +21,21 @@ final class BreweriesListViewController: UIViewController {
         }
     }
 
-    var presenter: BreweriesListPresenter!
+    @Injected(\.breweriesListPresenterProvider)
+    private var presenter: BreweriesListPresenterProviding
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Breweries"
+        presenter.view = self
         presenter.viewDidLoad()
     }
 }
 
-// MARK: - BreweriesListView
-extension BreweriesListViewController: BreweriesListView {
+// MARK: - BreweriesListViewProviding
+extension BreweriesListViewController: BreweriesListViewProviding {
+
     func reload() {
-        print(#function)
         tableView.reloadData()
     }
 

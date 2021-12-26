@@ -7,17 +7,11 @@
 
 import Foundation
 
-enum ApiRemoteDataSourceProvider {
-    static func provide() -> ApiRemoteDataSource {
-        ApiRemoteDataSourceImpl(session: URLSession.shared)
-    }
-}
-
-protocol ApiRemoteDataSource {
+protocol ApiRemoteDataSourceProviding {
     func request<T: GetRequest>(_ request: T) async throws -> T.Response
 }
 
-private struct ApiRemoteDataSourceImpl: ApiRemoteDataSource {
+struct ApiRemoteDataSource: ApiRemoteDataSourceProviding {
 
     private let session: URLSession
 

@@ -7,12 +7,29 @@
 
 import Foundation
 
-enum ApiError: Error {
+enum ApiError: Error, Equatable {
     case invalidRequest
     case cannotConnected
     case hasError(statusCode: Int)
     case decodingFailed(DecodingError)
     case unexpected(Error)
+
+    static func == (lhs: ApiError, rhs: ApiError) -> Bool {
+        switch (lhs, rhs) {
+        case (.invalidRequest, invalidRequest):
+            return true
+        case (.cannotConnected, cannotConnected):
+            return true
+        case (.hasError(statusCode: let lStatusCode), hasError(statusCode: let rStatusCode)):
+            return lStatusCode == rStatusCode
+        case (.decodingFailed(let lError), decodingFailed(let rError)):
+            return lError.localizedDescription == rError.localizedDescription
+        case (.unexpected(let lError), unexpected(let rError)):
+            return lError.localizedDescription == rError.localizedDescription
+        default:
+            return false
+        }
+    }
 }
 
 // MARK: - CustomNSError
